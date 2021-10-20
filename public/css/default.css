@@ -1,0 +1,23 @@
+/* default.css */
+html,
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+.heading {
+    font-weight: bold;
+    background: black;
+    color: white;
+    padding: 4px 8px;
+    margin-bottom: -11px;
+}
+.version {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 8px 15px 8px;
+}
+.logo {
+    display: block;
+    max-width: 125px;
+    padding-bottom: 16px;
+}

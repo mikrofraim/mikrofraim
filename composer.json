@@ -1,0 +1,36 @@
+{
+    "name": "tomrf/mikrofraim",
+    "type": "project",
+    "description": "small framework",
+    "keywords": [ "framework", "mikrofraim" ],
+    "homepage": "https://github.com/mikrofraim/mikrofraim",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=8",
+        "mikrofraim/framework-core": "dev-master"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12",
+        "friendsofphp/php-cs-fixer": "^3.1",
+        "ergebnis/php-cs-fixer-config": "^3.1"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:mikrofraim/framework-core.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "cs-fixer": [
+            "php-cs-fixer fix --diff --verbose ; rm .php-cs-fixer.cache"
+        ],
+        "phpstan": [
+            "phpstan analyze --level 6 app/"
+        ]
+    }
+}

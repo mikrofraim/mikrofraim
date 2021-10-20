@@ -1,0 +1,68 @@
+#!/usr/bin/env php
+<?php
+
+$options = getopt('', [], $optind);
+$command = $argv[$optind + 0] ?? null;
+
+switch ($command) {
+    case null:
+        echo 'Usage: bob <command> [options]' . PHP_EOL;
+        exit(1);
+
+    // case 'list-routes':
+    //     system("php vendor/tomrf/auto-route/bin/autoroute-dump.php --method handle App\\\\Http app/Http");
+    //     break;
+
+    // case 'new':
+    //     $type = $argv[$optind + 1] ?? null;
+    //     $name = $argv[$optind + 2] ?? null;
+    //     if ($type === 'provider' && $name !== null) {
+    //         $destination = 'app/ServiceProvider/' . $name . '.php';
+    //         $template = file_get_contents('src/Templates/ServiceProvider.php');
+    //         $template = str_replace('NewServiceProvider', $name, $template);
+    //         file_put_contents($destination, $template);
+    //         echo 'Creating new service provider: ' . $destination . PHP_EOL;
+    //     }
+    //     break;
+
+    case 'server':
+        if (!\is_dir('public/')) {
+            error('unable to chdir to public/ -- must run from project root');
+        }
+        chdir('public/');
+        system(sprintf(
+            'php -S %s:%s',
+            $argv[$optind + 1] ?? 'localhost',
+            $argv[$optind + 2] ?? '8080'
+        ));
+        exit(0);
+
+    case 'request':
+        $path = $argv[$optind + 1] ?? null;
+        $method = $argv[$optind + 2] ?? 'GET';
+
+        if (!$path) {
+            error('no path specified for request');
+        }
+
+        if (!is_file('public/index.php')) {
+            error('cannot find public/index.php -- must run from project root');
+        }
+
+        $_SERVER['REQUEST_URI'] = $path;
+        $_SERVER['REQUEST_METHOD'] = strtoupper($method);
+
+        chdir('public/');
+        include('index.php');
+
+        exit(0);
+
+    default:
+        error('unknown command: ' . $command);
+}
+
+function error(string $message): void
+{
+    echo 'Error: ' . $message . PHP_EOL;
+    exit(1);
+}
