@@ -14,12 +14,6 @@
         "friendsofphp/php-cs-fixer": "^3.1",
         "ergebnis/php-cs-fixer-config": "^3.1"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:mikrofraim/framework-core.git"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/"
