@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0e6ea7414bc7995adb9cdff73a12c2f",
+    "content-hash": "a3f0962aea6a7c2a29181285a75b70c5",
     "packages": [
         {
             "name": "cache/adapter-common",
@@ -1224,14 +1224,7 @@
                     "Mikrofraim\\": "src/"
                 }
             },
-            "scripts": {
-                "cs-fixer": [
-                    "php-cs-fixer fix --diff --verbose ; rm .php-cs-fixer.cache"
-                ],
-                "phpstan": [
-                    "phpstan analyze --level 6 src"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1242,8 +1235,8 @@
                 "mikrofraim"
             ],
             "support": {
-                "source": "https://github.com/mikrofraim/framework-core/tree/master",
-                "issues": "https://github.com/mikrofraim/framework-core/issues"
+                "issues": "https://github.com/mikrofraim/framework-core/issues",
+                "source": "https://github.com/mikrofraim/framework-core/tree/master"
             },
             "time": "2021-10-20T00:58:05+00:00"
         },
