@@ -1179,12 +1179,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikrofraim/framework-core.git",
-                "reference": "1b1a47d26c24bad2db4d3069a74eb5a0d21f26da"
+                "reference": "03bd70dcf1f404b5eb408e911edffe63124aa494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikrofraim/framework-core/zipball/1b1a47d26c24bad2db4d3069a74eb5a0d21f26da",
-                "reference": "1b1a47d26c24bad2db4d3069a74eb5a0d21f26da",
+                "url": "https://api.github.com/repos/mikrofraim/framework-core/zipball/03bd70dcf1f404b5eb408e911edffe63124aa494",
+                "reference": "03bd70dcf1f404b5eb408e911edffe63124aa494",
                 "shasum": ""
             },
             "require": {
@@ -1194,7 +1194,7 @@
                 "cache/redis-adapter": "^1.1",
                 "cache/simple-cache-bridge": "^1.1",
                 "cache/void-adapter": "^1.1",
-                "haydenpierce/class-finder": "^0.4.3",
+                "haydenpierce/class-finder": "0.4.3",
                 "laminas/laminas-diactoros": "^2.6",
                 "laminas/laminas-httphandlerrunner": "^2.0",
                 "laminas/laminas-stratigility": "^3.4",
@@ -1209,6 +1209,7 @@
                 "psr/http-server-handler": "^1",
                 "psr/http-server-middleware": "^1",
                 "symfony/var-dumper": "^5.3",
+                "tomrf/autowire": "0.0.1",
                 "twig/twig": "^3.3",
                 "vlucas/phpdotenv": "^5.3"
             },
@@ -1238,7 +1239,7 @@
                 "issues": "https://github.com/mikrofraim/framework-core/issues",
                 "source": "https://github.com/mikrofraim/framework-core/tree/master"
             },
-            "time": "2021-10-20T00:58:05+00:00"
+            "time": "2021-10-21T01:01:16+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2257,6 +2258,53 @@
                 }
             ],
             "time": "2021-09-24T15:59:58+00:00"
+        },
+        {
+            "name": "tomrf/autowire",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomrf/autowire.git",
+                "reference": "d683c37a8b228907327ad8c88508d2d2f53b5e63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomrf/autowire/zipball/d683c37a8b228907327ad8c88508d2d2f53b5e63",
+                "reference": "d683c37a8b228907327ad8c88508d2d2f53b5e63",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8",
+                "psr/container": "^1.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.1",
+                "phpstan/phpstan": "^0.12"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tomrf\\Autowire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "helps autowire dependency injection from PSR-11 containers",
+            "homepage": "http://github.com/tomrf/autowire",
+            "keywords": [
+                "PSR-11",
+                "autowire",
+                "containers",
+                "dependency injection",
+                "di"
+            ],
+            "support": {
+                "issues": "https://github.com/tomrf/autowire/issues",
+                "source": "https://github.com/tomrf/autowire/tree/0.0.1"
+            },
+            "time": "2021-10-21T00:16:53+00:00"
         },
         {
             "name": "twig/twig",
