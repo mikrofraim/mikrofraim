@@ -8,7 +8,7 @@ use Laminas\Stratigility\MiddlewarePipe;
 use Mikrofraim\ApplicationConfig;
 use Mikrofraim\Http\ErrorResponseGenerator;
 use Mikrofraim\Routes;
-use Tomrf\Autowire\Autowire;
+use Mikrofraim\Service\Autowire\Autowire;
 
 /* set basePath and storagePath, used in configurations */
 $basePath = \dirname(__DIR__);

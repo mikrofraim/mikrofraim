@@ -5,6 +5,7 @@
     "keywords": [ "framework", "mikrofraim" ],
     "homepage": "https://github.com/mikrofraim/mikrofraim",
     "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=8",
         "mikrofraim/framework-core": "dev-master"
