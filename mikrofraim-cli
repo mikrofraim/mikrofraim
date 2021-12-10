@@ -6,12 +6,9 @@ $command = $argv[$optind + 0] ?? null;
 
 switch ($command) {
     case null:
-        echo 'Usage: bob <command> [options]' . PHP_EOL;
-        exit(1);
+        echo 'Usage: mikrofraim-cli <command> [options]'.PHP_EOL;
 
-    // case 'list-routes':
-    //     system("php vendor/tomrf/auto-route/bin/autoroute-dump.php --method handle App\\\\Http app/Http");
-    //     break;
+        exit(1);
 
     // case 'new':
     //     $type = $argv[$optind + 1] ?? null;
@@ -35,6 +32,7 @@ switch ($command) {
             $argv[$optind + 1] ?? 'localhost',
             $argv[$optind + 2] ?? '8080'
         ));
+
         exit(0);
 
     case 'request':
@@ -53,16 +51,18 @@ switch ($command) {
         $_SERVER['REQUEST_METHOD'] = strtoupper($method);
 
         chdir('public/');
-        include('index.php');
+
+        include 'index.php';
 
         exit(0);
 
     default:
-        error('unknown command: ' . $command);
+        error('unknown command: '.$command);
 }
 
 function error(string $message): void
 {
-    echo 'Error: ' . $message . PHP_EOL;
+    echo 'Error: '.$message.PHP_EOL;
+
     exit(1);
 }

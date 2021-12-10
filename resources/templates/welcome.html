@@ -1,14 +1,12 @@
 {% extends "layout/master.html" %}
 
-{% block title 'Welcome' %}
+{% block title 'Welcome to mikrofraim' %}
 
 {% block body %}
-<div class="version">
+<div>
     <img class="logo" src="/img/mikrofraim-logo.png" alt="mikrofraim logo">
-    mikrofraim version {{ version }}
 </div>
-<div class="heading">request</div>
-<div>{{ dump(request) }}</div>
-<div class="heading">global.server</div>
-<div>{{ dump(global.server) }}</div>
+<div>
+    mikrofraim version <strong>{{ version }}</strong>
+</div>
 {% endblock %}
