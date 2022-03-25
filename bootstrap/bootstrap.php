@@ -9,14 +9,14 @@ use Mikrofraim\ServiceContainer;
 use Mikrofraim\ServiceProvider;
 
 // set basePath and storagePath, used in configurations
-$basePath = \dirname(__DIR__);
+$basePath = dirname(__DIR__);
 $storagePath = $basePath.'/storage';
 
 // autoload
 require $basePath.'/vendor/autoload.php';
 
 // load environment file if one exists
-if (\file_exists($basePath.'/.env')) {
+if (file_exists($basePath.'/.env')) {
     Dotenv::createImmutable($basePath)->load();
 }
 

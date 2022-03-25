@@ -11,8 +11,8 @@ class Example extends Controller
 {
     public function getExample(): ResponseInterface
     {
-        if (\file_exists('../VERSION')) {
-            $version = \trim((string) \file_get_contents('../VERSION'));
+        if (file_exists('../VERSION')) {
+            $version = trim((string) file_get_contents('../VERSION'));
         } else {
             $version = 'unknown';
         }
