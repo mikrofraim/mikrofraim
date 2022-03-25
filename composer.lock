@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2608833234d54d79fd266996860be20a",
+    "content-hash": "079f40ea7b707320f19a780775bd6fad",
     "packages": [
         {
             "name": "cache/adapter-common",
@@ -766,16 +766,16 @@
         },
         {
             "name": "mikrofraim/framework-core",
-            "version": "0.0.3",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikrofraim/framework-core.git",
-                "reference": "09cb35bf81208aec1614d1212cde7dd3166fd98e"
+                "reference": "59720ae2b76c31cedaabf6cdb4f4813abb6c371f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikrofraim/framework-core/zipball/09cb35bf81208aec1614d1212cde7dd3166fd98e",
-                "reference": "09cb35bf81208aec1614d1212cde7dd3166fd98e",
+                "url": "https://api.github.com/repos/mikrofraim/framework-core/zipball/59720ae2b76c31cedaabf6cdb4f4813abb6c371f",
+                "reference": "59720ae2b76c31cedaabf6cdb4f4813abb6c371f",
                 "shasum": ""
             },
             "require": {
@@ -790,6 +790,7 @@
                 "nyholm/psr7": "^1.5",
                 "nyholm/psr7-server": "^1.0",
                 "php": ">=8",
+                "pmjones/auto-route": "^2.1",
                 "psr/cache": "^1.0",
                 "psr/container": "^1.1",
                 "psr/event-dispatcher": "^1",
@@ -825,9 +826,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mikrofraim/framework-core/issues",
-                "source": "https://github.com/mikrofraim/framework-core/tree/0.0.3"
+                "source": "https://github.com/mikrofraim/framework-core/tree/0.0.4"
             },
-            "time": "2022-03-25T14:14:04+00:00"
+            "time": "2022-03-25T15:56:40+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1245,6 +1246,57 @@
                 }
             ],
             "time": "2021-12-04T23:24:31+00:00"
+        },
+        {
+            "name": "pmjones/auto-route",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmjones/AutoRoute.git",
+                "reference": "deb0d9f654273c7aab967de66b78c236cd55653d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmjones/AutoRoute/zipball/deb0d9f654273c7aab967de66b78c236cd55653d",
+                "reference": "deb0d9f654273c7aab967de66b78c236cd55653d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "psr/log": "^3.0"
+            },
+            "require-dev": {
+                "pds/skeleton": "^1.0",
+                "phpstan/phpstan": "^0.12.82",
+                "phpunit/phpunit": "^9.0"
+            },
+            "bin": [
+                "bin/autoroute-dump.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AutoRoute\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Automatically routes HTTP request to action classes.",
+            "homepage": "http://github.com/pmjones/auto-route",
+            "keywords": [
+                "action",
+                "adr",
+                "route",
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/pmjones/AutoRoute/issues",
+                "source": "https://github.com/pmjones/AutoRoute/tree/2.1.0"
+            },
+            "time": "2022-01-01T22:32:57+00:00"
         },
         {
             "name": "psr/cache",

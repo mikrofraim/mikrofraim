@@ -58,7 +58,7 @@ return [
     'middleware' => [
         \App\Http\Middleware\Headers::class,
         \Mikrofraim\Http\Middleware\Session::class,
-        \Mikrofraim\Http\Middleware\Router::class,
+        \Mikrofraim\Http\Middleware\FastRoute::class,
         \Mikrofraim\Http\Middleware\NotFound::class,
     ],
     'phpIni' => require 'phpIni.php',

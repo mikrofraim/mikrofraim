@@ -6,6 +6,7 @@ namespace App\Http\Controller;
 
 use Mikrofraim\Http\Controller as BaseController;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Log\LoggerInterface;
 use Twig\Environment as TwigEnvironment;
 
 class Controller extends BaseController
@@ -13,6 +14,7 @@ class Controller extends BaseController
     public function __construct(
         protected ServerRequestInterface $request,
         protected TwigEnvironment $twig,
+        protected LoggerInterface $logger,
     ) {
     }
 }
