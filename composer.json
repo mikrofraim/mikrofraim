@@ -4,16 +4,15 @@
     "description": "small framework",
     "keywords": [ "framework", "mikrofraim" ],
     "homepage": "https://github.com/mikrofraim/mikrofraim",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "minimum-stability": "dev",
     "require": {
         "php": ">=8",
-        "mikrofraim/framework-core": "dev-master"
+        "mikrofraim/framework-core": "0.0.2"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.12",
-        "friendsofphp/php-cs-fixer": "^3.1",
-        "ergebnis/php-cs-fixer-config": "^3.1"
+        "phpstan/phpstan": "^1.5",
+        "friendsofphp/php-cs-fixer": "^3.8"
     },
     "autoload": {
         "psr-4": {
