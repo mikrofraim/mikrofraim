@@ -5,14 +5,14 @@ declare(strict_types=1);
 return [
     '/' => [
         'description' => 'default routing group',
-        'middleware' => [], /* @todo implement */
+        'middleware' => [], // @todo implement
         'routes' => [
             '/' => [
-                'controller' => \App\Http\Controller\Example::class,
-                'middleware' => [], /* @todo implement */
+                'controller' => \App\Http\AutoRoute\Get::class,
+                'middleware' => [], // @todo implement
                 'methods' => [
-                    'get' => 'getExample',
-                    'post' => 'postExample',
+                    'get' => 'handle',
+                    'post' => 'handle',
                 ],
             ],
         ],

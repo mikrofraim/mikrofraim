@@ -58,6 +58,7 @@ return [
     'middleware' => [
         \App\Http\Middleware\Headers::class,
         \Mikrofraim\Http\Middleware\Session::class,
+        \Mikrofraim\Http\Middleware\AutoRoute::class,
         \Mikrofraim\Http\Middleware\FastRoute::class,
         \Mikrofraim\Http\Middleware\NotFound::class,
     ],

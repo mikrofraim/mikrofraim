@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "079f40ea7b707320f19a780775bd6fad",
+    "content-hash": "b4ee4689dbdffd06596c17f8e766d186",
     "packages": [
         {
             "name": "cache/adapter-common",
@@ -766,16 +766,16 @@
         },
         {
             "name": "mikrofraim/framework-core",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikrofraim/framework-core.git",
-                "reference": "59720ae2b76c31cedaabf6cdb4f4813abb6c371f"
+                "reference": "f0affb38958dfccc35d728ea4c78912ff8fe2d16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikrofraim/framework-core/zipball/59720ae2b76c31cedaabf6cdb4f4813abb6c371f",
-                "reference": "59720ae2b76c31cedaabf6cdb4f4813abb6c371f",
+                "url": "https://api.github.com/repos/mikrofraim/framework-core/zipball/f0affb38958dfccc35d728ea4c78912ff8fe2d16",
+                "reference": "f0affb38958dfccc35d728ea4c78912ff8fe2d16",
                 "shasum": ""
             },
             "require": {
@@ -826,9 +826,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mikrofraim/framework-core/issues",
-                "source": "https://github.com/mikrofraim/framework-core/tree/0.0.4"
+                "source": "https://github.com/mikrofraim/framework-core/tree/0.0.5"
             },
-            "time": "2022-03-25T15:56:40+00:00"
+            "time": "2022-03-25T17:10:37+00:00"
         },
         {
             "name": "monolog/monolog",
