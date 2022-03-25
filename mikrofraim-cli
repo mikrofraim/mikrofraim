@@ -10,18 +10,6 @@ switch ($command) {
 
         exit(1);
 
-    // case 'new':
-    //     $type = $argv[$optind + 1] ?? null;
-    //     $name = $argv[$optind + 2] ?? null;
-    //     if ($type === 'provider' && $name !== null) {
-    //         $destination = 'app/ServiceProvider/' . $name . '.php';
-    //         $template = file_get_contents('src/Templates/ServiceProvider.php');
-    //         $template = str_replace('NewServiceProvider', $name, $template);
-    //         file_put_contents($destination, $template);
-    //         echo 'Creating new service provider: ' . $destination . PHP_EOL;
-    //     }
-    //     break;
-
     case 'server':
         if (!\is_dir('public/')) {
             error('unable to chdir to public/ -- must run from project root');

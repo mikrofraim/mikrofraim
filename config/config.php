@@ -63,5 +63,4 @@ return [
         \Mikrofraim\Http\Middleware\NotFound::class,
     ],
     'phpIni' => require 'phpIni.php',
-    'phpIniAssert' => require 'phpIniAssert.php',
 ];

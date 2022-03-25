@@ -4,14 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Controller;
 
-use Mikrofraim\Attribute\Route;
-use Mikrofraim\Attribute\RouteMethod;
 use Nyholm\Psr7\Response;
 
-// #[Route('/')]
 class Example extends Controller
 {
-    // #[RouteMethod('GET')]
     public function getExample()
     {
         if (\file_exists('../VERSION')) {
@@ -31,7 +27,6 @@ class Example extends Controller
         return $response;
     }
 
-    // #[RouteMethod('POST')]
     public function postExample()
     {
         return new Response(302, ['Location' => '/']);
