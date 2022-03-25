@@ -6,6 +6,7 @@ use Dotenv\Dotenv;
 use Mikrofraim\ApplicationConfig;
 use Mikrofraim\Service\Autowire\Autowire;
 use Mikrofraim\ServiceContainer;
+use Mikrofraim\ServiceProvider;
 
 // set basePath and storagePath, used in configurations
 $basePath = \dirname(__DIR__);
@@ -34,7 +35,9 @@ $serviceContainer->set(ApplicationConfig::class, $applicationConfig);
 
 // add all configured service providers to service container
 foreach ($config['services'] as $serviceProviderClass) {
-    $serviceContainer->addServiceProvider(new $serviceProviderClass($applicationConfig));
+    /** @var ServiceProvider */
+    $serviceProvider = new $serviceProviderClass($applicationConfig);
+    $serviceContainer->addServiceProvider($serviceProvider);
 }
 
 /** @var \Mikrofraim\Service\Autowire\Autowire */

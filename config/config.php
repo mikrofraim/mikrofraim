@@ -57,7 +57,6 @@ return [
     ],
     'middleware' => [
         \App\Http\Middleware\Headers::class,
-        \App\Http\Middleware\Favicon::class,
         \Mikrofraim\Http\Middleware\Session::class,
         \Mikrofraim\Http\Middleware\Router::class,
         \Mikrofraim\Http\Middleware\NotFound::class,

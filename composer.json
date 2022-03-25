@@ -5,7 +5,6 @@
     "keywords": [ "framework", "mikrofraim" ],
     "homepage": "https://github.com/mikrofraim/mikrofraim",
     "license": "MIT",
-    "minimum-stability": "dev",
     "require": {
         "php": ">=8",
         "mikrofraim/framework-core": "0.0.2"
@@ -24,7 +23,7 @@
             "php-cs-fixer fix --diff --verbose ; rm .php-cs-fixer.cache"
         ],
         "phpstan": [
-            "phpstan analyze --level 6 app/"
+            "phpstan analyze --level max app/ bootstrap/ public/"
         ]
     }
 }
