@@ -1,11 +1,18 @@
 <?php
-use Ergebnis\PhpCsFixer\Config;
 
-$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php80(), [
-    'final_class' => false
-]);
+declare(strict_types=1);
 
-$config->getFinder()->in(__DIR__);
-$config->setCacheFile(__DIR__ . '/.php-cs-fixer.cache');
-
-return $config;
+return (new PhpCsFixer\Config())
+    ->setRules([
+        '@PSR12' => true,
+        '@PSR12:risky' => true,
+        '@PhpCsFixer' => true,
+        '@PhpCsFixer:risky' => true,
+        '@PHP80Migration' => true,
+        '@PHP80Migration:risky' => true,
+    ])
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->in(__DIR__.'/app')
+    )
+;
