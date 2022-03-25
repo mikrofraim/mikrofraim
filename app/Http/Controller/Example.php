@@ -20,7 +20,7 @@ class Example extends Controller
         $response = new Response();
 
         $response->getBody()->write(
-            $this->twig->render('welcome.html', [
+            $this->twig->render('view/welcome.html', [
                 'version' => $version,
             ]),
         );
